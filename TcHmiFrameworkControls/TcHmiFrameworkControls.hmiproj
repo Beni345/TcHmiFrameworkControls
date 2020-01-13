@@ -94,6 +94,7 @@
     <Folder Include="Server\Extensions\ADS" />
     <Folder Include="Server\Extensions\TcHmiEventLogger" />
     <Folder Include="Server\Extensions\TcHmiLua" />
+    <Folder Include="Server\Extensions\TcHmiMqttMongoDbServerExt" />
     <Folder Include="Server\Extensions\TcHmiRecipeManagement" />
     <Folder Include="Server\Extensions\TcHmiSqliteHistorize" />
     <Folder Include="Server\Extensions\TcHmiSqliteLogger" />
@@ -156,6 +157,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\Extensions\TcHmiLua\TcHmiLua.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\Extensions\TcHmiMqttMongoDbServerExt\TcHmiMqttMongoDbServerExt.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\Extensions\TcHmiMqttMongoDbServerExt\TcHmiMqttMongoDbServerExt.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\Extensions\TcHmiMqttMongoDbServerExt\TcHmiMqttMongoDbServerExt.Storage.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\Extensions\TcHmiRecipeManagement\TcHmiRecipeManagement.Config.default.json">
@@ -300,5 +310,13 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TcHmiReference Include="0a6f7221-940a-45d2-b66a-f3575ee9c735">
+      <Type>SrvRefSolution</Type>
+      <RelativePath>../../Libraries/TcHmiCSharpLibs/TcHmiMqttMongoDbServerExt/TcHmiMqttMongoDbServerExt/TcHmiMqttMongoDbServerExt.csproj</RelativePath>
+      <Domain>
+      </Domain>
+    </TcHmiReference>
   </ItemGroup>
 </Project>

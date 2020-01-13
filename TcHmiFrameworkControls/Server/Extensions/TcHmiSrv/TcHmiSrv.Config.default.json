@@ -24,7 +24,17 @@
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
-    "DEFINITIONS": {},
+    "DEFINITIONS": {
+        "TcHmiSrv.Access": {
+            "enum": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "type": "integer"
+        }
+    },
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DISCOVERY": 2,
     "ENDPOINTS": [
@@ -50,6 +60,13 @@
             "PATH": "",
             "PLUGINCONTAINER": "in process",
             "REQUIRED": true,
+            "STARTUPTYPE": 1
+        },
+        "TcHmiMqttMongoDbServerExt": {
+            "ENABLED": true,
+            "NAME": "TcHmiMqttMongoDbServerExt",
+            "PATH": "..\\..\\..\\..\\Libraries\\TcHmiCSharpLibs\\TcHmiMqttMongoDbServerExt\\TcHmiMqttMongoDbServerExt\\bin\\Debug\\",
+            "REQUIRED": false,
             "STARTUPTYPE": 1
         },
         "TcHmiRecipeManagement": {
@@ -726,6 +743,16 @@
             "OPTIONS": {},
             "SCHEMA": {
                 "function": true
+            },
+            "USEMAPPING": true
+        },
+        "Access": {
+            "ACCESS": 3,
+            "CUSTOMERDATA": "",
+            "DOMAIN": "TcHmiMqttMongoDbServerExt",
+            "MAPPING": "Access",
+            "SCHEMA": {
+                "$ref": "#/definitions/TcHmiSrv.Access"
             },
             "USEMAPPING": true
         },
@@ -1990,6 +2017,26 @@
             "SCHEMA": {},
             "USEMAPPING": true
         },
+        "TcHmiMqttMongoDbServerExt.Access": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMqttMongoDbServerExt",
+            "HIDDEN": false,
+            "MAPPING": "Access",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "$ref": "#/definitions/TcHmiSrv.Access"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMqttMongoDbServerExt.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiMqttMongoDbServerExt",
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
         "TcHmiRecipeManagement.ActivateRecipe": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiRecipeManagement",
@@ -2637,6 +2684,6 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\TcHmiFrameworkControls",
-        "/framework": "..\\..\\..\\..\\..\\..\\..\\TwinCAT\\Functions\\TE2000-HMI-Engineering\\Infrastructure\\TcHmiFramework\\1.10.1336.0"
+        "/framework": "..\\..\\..\\..\\..\\..\\..\\..\\TwinCAT\\Functions\\TE2000-HMI-Engineering\\Infrastructure\\TcHmiFramework\\1.10.1336.0"
     }
 }
